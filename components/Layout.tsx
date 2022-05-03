@@ -2,7 +2,6 @@ import React from 'react';
 import { MetaProps } from '../types/layout';
 import Head from './Head';
 import Navigation from './Navigation';
-import ThemeSwitch from './ThemeSwitch';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -16,10 +15,9 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
     <>
       <Head customMeta={customMeta} />
       <header>
-        <div className="max-w-5xl px-8 mx-auto">
-          <div className="flex items-center justify-between py-6">
+        <div className="my-8 max-w-5xl px-8 mx-auto text-center">
+          <div className="justify-center justify-between py-6">
             <Navigation />
-            <ThemeSwitch />
           </div>
         </div>
       </header>
@@ -28,12 +26,11 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
       </main>
       <footer className="py-8">
         <div className="max-w-5xl px-8 mx-auto">
-          Built by{' '}
           <a
             className="text-gray-900 dark:text-white"
-            href="https://twitter.com/huntarosan"
+            href="https://www.vtapi.co"
           >
-            Hunter Chang
+            vtapi.co
           </a>
         </div>
       </footer>
